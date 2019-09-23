@@ -1,0 +1,1 @@
+#Simple python slot machine for homework
