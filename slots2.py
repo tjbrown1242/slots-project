@@ -20,10 +20,7 @@ def spin_reels():
     a,b,c = [random.randint(0,1),random.randint(0,1),random.randint(0,1)]
     print("Your numbers are:\n ")
     print(a, b, c)
-    if a != b or a != c:
-      print("You did not win this time.  Try again?\n")
-      make_choice()
-    elif a == b and a !=c:
+    if a == b:
       print ("You win 1000!\n")
       wallet += 1000
       balance_checker()
@@ -34,7 +31,10 @@ def spin_reels():
       balance_checker()
       print('Play again???\n')
     else:
-      make_choice()    
+      print("You did not win this time.  Try again?\n")
+      make_choice()
+    
+       
 
 def bet():
   global wallet
