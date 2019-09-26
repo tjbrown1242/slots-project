@@ -65,7 +65,7 @@ def make_choice():
     spin_reels()
   elif option == 4:
     print ('Thank you for playing!!\n\n')
-    print(f'Cashing out ${wallet}\n\n')
+    print(f'Cashing out ${wallet:.2f}\n\n')
     exit()
   else:
     print("That was not a valid option, please try again\n")
