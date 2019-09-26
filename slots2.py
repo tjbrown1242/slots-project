@@ -17,7 +17,7 @@ def balance_checker():
 
 def spin_reels():
     global wallet
-    a,b,c = [random.randint(0,1),random.randint(0,1),random.randint(0,1)]
+    a,b,c = [random.randint(0, 20),random.randint(0, 20),random.randint(0, 20)]
     print("Your numbers are:\n ")
     print(a, b, c)
     if a == b:
