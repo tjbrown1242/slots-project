@@ -17,19 +17,20 @@ def balance_checker():
 
 def spin_reels():
     global wallet
-    a,b,c = [random.randint(0, 20),random.randint(0, 20),random.randint(0, 20)]
+    a,b,c = [random.randint(0, 1),random.randint(0, 1),random.randint(0, 1)]
     print("Your numbers are:\n ")
     print(a, b, c)
-    if a == b:
-      print ("You win 1000!\n")
-      wallet += 1000
-      balance_checker()
-      print('Play again???')
-    elif a == b and a == c: 
+    if a == b and a == c: 
       print ("You win 10,000!\n")
       wallet += 10000
       balance_checker()
       print('Play again???\n')
+    elif a == b:
+      print ("You win 1000!\n")
+      wallet += 1000
+      balance_checker()
+      print('Play again???')
+    
     else:
       print("You did not win this time.  Try again?\n")
       make_choice()
@@ -48,10 +49,10 @@ def bet():
 
 def make_choice():
   global wallet
-  print('Please Press 1 For Your wallet balance \n\n')
-  print('Please Press 2 To Add funds to your wallet \n\n')
-  print('Please Press 3 To SPIN the wheels! \n\n')
-  print('Please Press 4 To Cash out \n\n')  
+  print(' 1 For your wallet balance \n\n')
+  print(' 2 To Add funds to your wallet \n\n')
+  print(' 3 To SPIN the wheels! \n\n')
+  print(' 4 To Cash out \n\n')  
   option = int(input('Please make a selection.... \n\n'))
   if option == 1:
     balance_checker()
@@ -69,7 +70,8 @@ def make_choice():
     exit()
   else:
     print("That was not a valid option, please try again\n")
-    options()
+    
+  #options()
 
 def welcome():
  print('Welcome to the Slot Machine!\n \n')
